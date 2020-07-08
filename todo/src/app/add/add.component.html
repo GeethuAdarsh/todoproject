@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+     <div>
+        <input type="text" formControlName="title" placeholder="title" [ngClass]="getError('title')?'input-error':''">
+        <div *ngIf="getError('title')"  class="error">
+            Title is required
+        </div>
+     </div>
+     <div>
+        <input type="text" formControlName="description" placeholder="description" [ngClass]="getError('description')?'input-error':''">
+        <div *ngIf="getError('description')"  class="error">
+            Description is required
+        </div>
+     </div>
+     <div>
+        <input type="date" formControlName="date" placeholder="date" [ngClass]="getError('date')?'input-error':''">
+        <div *ngIf="getError('date')" class="error">
+            Date is required 
+        </div>
+     </div>
+     <div>
+        <input type="submit" value="Submit">
+     </div>    
+    
+     
+     
+</form>

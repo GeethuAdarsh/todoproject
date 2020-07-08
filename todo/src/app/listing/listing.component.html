@@ -1,0 +1,16 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date</th>
+        </tr>
+        <tr *ngFor="let todos of todos">
+                <td>{{todos.title   }}</td>
+                <td>{{todos.description  }}</td>
+                <td>{{todos.date | date:"dd/MM/yy hh:ss" }}</td>
+                
+        </tr>
+    </table>
+    <button (click)="addtodo()">Add ToDo</button>
+</div>
